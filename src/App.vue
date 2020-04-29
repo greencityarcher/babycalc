@@ -250,6 +250,9 @@
                   <transition name="fade">
                     <div v-if="noSelectedMethodsError" role="alert" class="alert alert-primary mt-3" v-text="$ml.with('VueJS').get('methodsWarn')"/>
                   </transition>
+                  <transition name="fade">
+                    <div v-if="chineseAgeCalendarError" role="alert" class="alert alert-primary mt-3" v-text="$ml.with('VueJS').get('chineseAgeCalendarError')"/>
+                  </transition>
                 </div>
                 <!--FULLCALENDAR-->
                 <div class="col-lg col-xl-7">
@@ -498,13 +501,14 @@ export default {
       calendarLanguage: 'ru',
       eventsSorting: ['methodid'],
       modalHeaderBcg: 'secondary',
-      modalHeaderText: 'primary'
+      modalHeaderText: 'primary',
+      chineseAgeCalendarError: false
   }
 },
 computed:{
 
   chineseAgeError: function () {
-    var momChineseAge = this.calcChineseAge(this.motherBday);
+    var momChineseAge = this.calcChineseAge(this.motherBday, this.conceptionDay);
       if (momChineseAge<18 || momChineseAge > 45){
         return true;
       }
@@ -592,11 +596,13 @@ methods: {
     }
     return result;
   },
-  calcChineseAge(bDay){
-    var now = new Date();
+  calcChineseAge(bDay, conceptionDay){
+  //  var now = new Date();
+    console.log('cocncday in chineseage'+conceptionDay);
     var lunarBirthYear = this.convertSolarToLunar(bDay).lunarYear;
-    var currentLunarYear = this.convertSolarToLunar(now).lunarYear;
+    var currentLunarYear = this.convertSolarToLunar(conceptionDay).lunarYear;
     var lunarAgeInYears = currentLunarYear - lunarBirthYear + 1;
+    console.log('лунный возраст' + lunarAgeInYears);
     return lunarAgeInYears;
   },
 
@@ -619,8 +625,8 @@ methods: {
         lunarConceptionMonth=lunarConceptionMonth+1;
       }
     }
-
-    var momLunarAgeInYears = this.calcChineseAge(momBDay);
+//////!!!!!!!
+    var momLunarAgeInYears = this.calcChineseAge(momBDay, concDay);
 
     var chineseTableCell = this.chineseTable.find(obj => {
       return (obj.age === momLunarAgeInYears && obj.month === lunarConceptionMonth-1);//because in data month starts by 0 and lunar convertor start month by 1
@@ -722,7 +728,6 @@ methods: {
   calcOverallPrognose(resultsArray){
 
     if (resultsArray.length == 0){
-      console.log('no selected methods');
       return null;
     }
     else{
@@ -764,6 +769,10 @@ methods: {
 
   //returns method event object for calendar
   createEvent(start, end, gender, methodPic, methodId, probability){
+    if(gender == null){
+      console.log('null event');
+      return null;
+    }
     var event = {};
     var eventClasses='event';
 
@@ -840,28 +849,36 @@ methods: {
     var displayByMethods = this.displayByMethods;
     var createEv = this.createEvent;
     var createOverallEv = this.createOverallEvent;
+    var chErr = false;
+    //refresh error state
+    this.chineseAgeCalendarError = false;
 
     prognose.forEach(function(el){
       var start = dateFormattingFunc(el.date);
       var end = start;
+
+      //check if some gender results is null that chinese age is over diapasone
+      if (el.results.some(r => !r.gender)){
+        chErr = true;
+      }
       //separate forecast
       if (displayByMethods) {
         el.results.forEach(function(res){
           var event = createEv(start, end, res.gender, res.pic, res.method, res.probability);
-          events.push(event);
+          if (event != null){
+            events.push(event);
+          }
         });
-
       }
       //generalized forecast
       else {
         var eventOverall = createOverallEv(start,end,el.overall);
-        if (eventOverall == null){
-          return;
+        if (eventOverall != null){
+          events.push(eventOverall);
         }
-        events.push(eventOverall);
       }
     });
-
+    this.chineseAgeCalendarError = chErr;
     return events;
   },
 
@@ -901,7 +918,9 @@ handleMonthChange: function(info){
 
   translateResults(results){
     for (var i = 0; i < results.length; i++){
-      results[i].genderMl = this.$ml.get(results[i].gender);
+      if(results[i].gender != null){
+        results[i].genderMl = this.$ml.get(results[i].gender);
+      }
     }
   },
   getSimpleResultClass(id){
