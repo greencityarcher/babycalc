@@ -126,6 +126,13 @@
           <transition name="fade">
             <div role="alert" class="alert alert-primary" v-if="(this.mode&&!motherBday)||(this.mode&&!fatherBday)" v-text="$ml.with('VueJS').get('datesWarn')"/>
           </transition>
+          <transition name="fade">
+            <div role="alert" class="alert alert-primary" v-if="this.motherBDayError" v-text="$ml.with('VueJS').get('motherBDayError')"/>
+          </transition>
+          <transition name="fade">
+            <div role="alert" class="alert alert-primary" v-if="this.fatherBDayError" v-text="$ml.with('VueJS').get('fatherBDayError')"/>
+          </transition>
+
 
         </div>
 
@@ -194,9 +201,9 @@
         <section>
           <div class="container">
             <transition name="fade">
-                <role="alert" class="alert alert-primary" v-if="methods.every(elem => !elem.used)" v-text="$ml.with('VueJS').get('methodsWarn')"/>
                 <role="alert" class="alert alert-primary" v-if="(this.mode&&!motherBday)||(this.mode&&!fatherBday)" v-text="$ml.with('VueJS').get('datesWarn')"/>
           </transition>
+
           </div>
         </section>
         <!-- RESULTS -->
@@ -253,6 +260,13 @@
                   <transition name="fade">
                     <div v-if="chineseAgeCalendarError" role="alert" class="alert alert-primary mt-3" v-text="$ml.with('VueJS').get('chineseAgeCalendarError')"/>
                   </transition>
+                  <transition name="fade">
+                    <div v-if="motherBDayCalendarError" role="alert" class="alert alert-primary mt-3" v-text="$ml.with('VueJS').get('motherBDayCalendarError')"/>
+                  </transition>
+                  <transition name="fade">
+                    <div v-if="fatherBDayCalendarError" role="alert" class="alert alert-primary mt-3" v-text="$ml.with('VueJS').get('fatherBDayCalendarError')"/>
+                  </transition>
+
                 </div>
                 <!--FULLCALENDAR-->
                 <div class="col-lg col-xl-7">
@@ -369,7 +383,7 @@
           </ul>
         </div>
         <hr />
-        <div class="about">
+      <!--  <div class="about">
           <div  class="row">
             <div class="col-6">
               <base-button class="btn rounded-circle btn-icon-only btn-icon btn-info btn-sharebar" type="info" v-b-modal.modal-feedback>
@@ -416,7 +430,7 @@
             </div>
 
           </div>
-        </div>
+        </div>-->
       </div>
 
 
@@ -502,7 +516,9 @@ export default {
       eventsSorting: ['methodid'],
       modalHeaderBcg: 'secondary',
       modalHeaderText: 'primary',
-      chineseAgeCalendarError: false
+      chineseAgeCalendarError: false,
+      motherBDayCalendarError: false,
+      fatherBDayCalendarError: false
   }
 },
 computed:{
@@ -523,9 +539,23 @@ computed:{
       else{
         return false;
       }
+    },
+    motherBDayError: function(){
+      if (this.motherBday && this.conceptionDay && !this.mode && this.motherBday>this.conceptionDay){
+        return true;
+      }
+      else{
+        return false;
+      }
+    },
+    fatherBDayError: function(){
+      if (this.fatherBday && this.conceptionDay && !this.mode && this.fatherBday>this.conceptionDay){
+        return true;
+      }
+      else{
+        return false;
+      }
     }
-
-
 },
 methods: {
 
@@ -597,12 +627,9 @@ methods: {
     return result;
   },
   calcChineseAge(bDay, conceptionDay){
-  //  var now = new Date();
-    console.log('cocncday in chineseage'+conceptionDay);
     var lunarBirthYear = this.convertSolarToLunar(bDay).lunarYear;
     var currentLunarYear = this.convertSolarToLunar(conceptionDay).lunarYear;
     var lunarAgeInYears = currentLunarYear - lunarBirthYear + 1;
-    console.log('лунный возраст' + lunarAgeInYears);
     return lunarAgeInYears;
   },
 
@@ -701,8 +728,6 @@ methods: {
     for (var d = startOfPeriod; d <= endOfPeriod; d.setDate(d.getDate() + 1)) {
       daysOfPeriod.push(new Date(d));
     }
-   console.log('prognose start after createDaysArray '+this.prognoseStart);
-   console.log('prognose end after createDaysArray '+this.prognoseEnd);
 
     return daysOfPeriod;
   },
@@ -715,13 +740,28 @@ methods: {
     var calcFunc = this.calcAll;
     var period = this.createDaysArray();
     var calcOverall = this.calcOverallPrognose;
+    var motherBdayOutOfRange = false;
+    var fatherBdayOutOfRange = false;
+
     period.forEach(function(el){
       var p = {};
       p.date = el;
       p.results = calcFunc(momBday, dadBday, el);
       p.overall = calcOverall(p.results);
-      prognose.push(p);
+
+      if ((momBday < el) && (dadBday < el)){
+        prognose.push(p);
+      }
+      if (momBday > el){
+        motherBdayOutOfRange = true;
+      }
+      if (dadBday > el){
+        fatherBdayOutOfRange = true;
+      }
     });
+    this.motherBDayCalendarError = motherBdayOutOfRange;
+    this.fatherBDayCalendarError = fatherBdayOutOfRange;
+
     return prognose;
   },
 
@@ -733,6 +773,7 @@ methods: {
     else{
       var boyCount = 0;
       var girlCount = 0;
+      var noresultCount = 0;
       var res;
       resultsArray.forEach(function(el){
         if (el.gender == 'boy'){
@@ -741,6 +782,9 @@ methods: {
         if (el.gender == 'girl'){
           girlCount++;
         }
+        if (el.gender == null){
+          noresultCount++;
+        }
       });
 
       if (boyCount > girlCount){
@@ -748,10 +792,14 @@ methods: {
       }
       else if (boyCount < girlCount){
           res = 'girl';
-        }
+      }
+      else if (resultsArray.length == 1 && noresultCount > 0 ){
+        return null;
+      }
       else {
           res = 'boyorgirl';
         }
+
       return res;
     }
   },
@@ -770,7 +818,6 @@ methods: {
   //returns method event object for calendar
   createEvent(start, end, gender, methodPic, methodId, probability){
     if(gender == null){
-      console.log('null event');
       return null;
     }
     var event = {};
@@ -780,13 +827,11 @@ methods: {
     if (gender == 'boy'){
       eventClasses += ' evBoy';
     }
-    else{
-      if(gender == 'girl'){
-        eventClasses += ' evGirl';
-      }
-      else{
-        eventClasses += ' evBoyGirl';
-      }
+    if (gender == 'girl'){
+      eventClasses += ' evGirl';
+    }
+    if(gender == 'boyorgirl'){
+      eventClasses += ' evBoyGirl';
     }
 
     //add method info
@@ -821,6 +866,7 @@ methods: {
     if (gender==null){
       return null;
     }
+
     var event = {};
     event.start = start;
     event.end = end;
@@ -829,14 +875,13 @@ methods: {
     if (gender == 'boy'){
       event.className +=' evOverallBoy';
     }
-    else {
-      if (gender == 'girl') {
-        event.className +=' evOverallGirl';
-      }
-      else{
-        event.className +=' evOverallBoyGirl';
-      }
+    if (gender == 'girl') {
+      event.className +=' evOverallGirl';
     }
+    if (gender == 'boyorgirl'){
+      event.className +=' evOverallBoyGirl';
+    }
+
     return event;
   },
 
@@ -852,7 +897,6 @@ methods: {
     var chErr = false;
     //refresh error state
     this.chineseAgeCalendarError = false;
-
     prognose.forEach(function(el){
       var start = dateFormattingFunc(el.date);
       var end = start;
@@ -889,7 +933,7 @@ methods: {
         this.calendarEvents = this.buildSchedule(this.motherBday, this.fatherBday);
       }
       else{
-        if (this.conceptionDay ){
+        if (this.conceptionDay && !this.motherBDayError && !this.fatherBDayError){
           this.complexResult = this.calcAll(this.motherBday, this.fatherBday, this.conceptionDay);
         }
       }
