@@ -11,6 +11,7 @@ import BaseSwitch from "../components/BaseSwitch";
 import Card from "../components/Card";
 import Icon from "../components/Icon";
 import { ModalPlugin } from '../../node_modules/bootstrap-vue'
+//import { ModalPlugin } from '/bootstrap-vue'
 import { PopoverPlugin } from 'bootstrap-vue';
 //import { CollapsePlugin } from 'bootstrap-vue'
 

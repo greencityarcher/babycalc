@@ -383,7 +383,7 @@
           </ul>
         </div>
         <hr />
-      <!--  <div class="about">
+       <div class="about">
           <div  class="row">
             <div class="col-6">
               <base-button class="btn rounded-circle btn-icon-only btn-icon btn-info btn-sharebar" type="info" v-b-modal.modal-feedback>
@@ -430,7 +430,7 @@
             </div>
 
           </div>
-        </div>-->
+        </div>
       </div>
 
 
