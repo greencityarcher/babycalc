@@ -37,7 +37,7 @@
                 <div class="col col-md-10 col-no-margin-up">
                   <p class="lead  text-white" v-text="$ml.with('VueJS').get('aboutPart1')"/>
                   <p class="lead  text-white" v-text="$ml.with('VueJS').get('aboutPart2')"/>
-                  <p class="lead mb-5  text-white" v-text="$ml.with('VueJS').get('aboutPart3')"/>
+                  <!--<p class="lead mb-5  text-white" v-text="$ml.with('VueJS').get('aboutPart3')"/>-->
                   <p class="alert alert-secondary" role="alert"  v-text="$ml.with('VueJS').get('disclaimer')"/>
                 </div>
               </div>
@@ -354,29 +354,28 @@
           <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('shareUs')"/>
           <ul class="sharebar__link-list">
             <li>
-
-              <a href="" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar">
+              <a href="https://twitter.com/share?text=See%20the%20baby%20gender%20prediction%20calculator%20-%20&url=https://babycalc.info%2F" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
                 <i class="fa fa-twitter"></i>
               </a>
 
             </li>
             <li>
-              <a href="" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbabycalc.info%2F&amp;src=sdkpreparse" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
                 <i class="fa fa-facebook"></i>
               </a>
             </li>
-            <li>
+            <!--<li>
               <a href="" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar">
                 <i class="fa fa-instagram"></i>
               </a>
-            </li>
+            </li>-->
             <li>
-              <a href="" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar">
+              <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://babycalc.info/." class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
                 <i class="fa fa-envelope"></i>
               </a>
             </li>
             <li>
-              <a href="" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar">
+              <a href="https://telegram.me/share/url?url=https://babycalc.info/&text=Baby%20gender%20prediction%20calculator" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
                 <i class="fa fa-telegram"></i>
               </a>
             </li>
@@ -946,7 +945,7 @@ getViewDates: function(info){
 handleMonthChange: function(info){
   this.getViewDates(info);
   this.dispatchDataEnter();
-//  this.getViewDates(info);
+
 },
 
   changeLanguage(lang){
