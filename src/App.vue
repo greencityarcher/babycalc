@@ -348,10 +348,11 @@
 
     </main>
 
-    <section class="footer">
+    <section class="footer mb-5">
       <div class="container">
         <div class="sharebar mb-5">
           <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('shareUs')"/>
+          <hr />
           <ul class="sharebar__link-list">
             <li>
               <a href="https://twitter.com/share?text=See%20the%20baby%20gender%20prediction%20calculator%20-%20&url=https://babycalc.info%2F" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
@@ -381,57 +382,97 @@
             </li>
           </ul>
         </div>
-        <hr />
-       <div class="about">
-          <div  class="row">
-            <div class="col-6">
-              <base-button class="btn rounded-circle btn-icon-only btn-icon btn-info btn-sharebar" type="info" v-b-modal.modal-feedback>
-                <i class="fa fa-commenting"></i>
-              </base-button>
-              <b-modal id="modal-feedback" title="BootstrapVue" hide-footer centered :header-bg-variant="modalHeaderBcg" :header-text-variant ="modalHeaderText">
-                <template v-slot:modal-title>
-                  <span v-text="$ml.with('VueJS').get('writeDevsTitle')"/>
-                </template>
-                <p class="text-center" v-text="$ml.with('VueJS').get('writeDevsText1')"/>
-                <p class="text-center mb-5" v-text="$ml.with('VueJS').get('writeDevsText2')"/>
-                <div class="text-center mb-5">
-                  <a href="mailto:babycalcforecast@gmail.com" class="btn btn-icon btn-primary">
-                    <span class="btn-inner--icon">
-                      <i class="fa fa-envelope"></i>
-                    </span>
-                    <span class="btn-inner--text" v-text="$ml.with('VueJS').get('mailButton')"/>
-                  </a>
-                </div>
 
-              </b-modal>
-
-            </div>
-            <div class="col-6 text-right">
-              <base-button class="btn rounded-circle btn-icon-only btn-icon btn-warning btn-sharebar"  type="warning" v-b-modal.modal-donate>
-                <i class="fa fa-money"></i>
-              </base-button>
-              <b-modal id="modal-donate" title="BootstrapVue" hide-footer centered :header-bg-variant="modalHeaderBcg" :header-text-variant ="modalHeaderText">
-                <template v-slot:modal-title>
-                  <span v-text="$ml.with('VueJS').get('donateDevsTitle')"/>
-                </template>
-                <p class="text-center mb-5" v-text="$ml.with('VueJS').get('donateDevsText1')"/>
-                <div class="text-center mb-5">
-                  <a href="https://www.paypal.me/greencityarcher" class="btn btn-icon btn-warning" target="_blank">
-                    <span class="btn-inner--icon">
-                      <i class="fa fa-money"></i>
-                    </span>
-                    <span class="btn-inner--text" v-text="$ml.with('VueJS').get('donateButton')"/>
-                  </a>
-                </div>
-                <p class="text-center mb-5" v-text="$ml.with('VueJS').get('donateDevsText2')"/>
-
-              </b-modal>
-            </div>
-
-          </div>
-        </div>
+      </div>
+    </section>
+    <section class="text-content">
+      <div class="container">
+        <h2 class="mb-5 text-primary" v-text="$ml.with('VueJS').get('ContentH2')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP1')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP2')"/>
+        <ul class="text-list">
+          <li v-text="$ml.with('VueJS').get('ContentL1')"/>
+          <li v-text="$ml.with('VueJS').get('ContentL2')"/>
+          <li v-text="$ml.with('VueJS').get('ContentL3')"/>
+        </ul>
+        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_1')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP3')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP4')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP5')"/>
+        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_2')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP6')"/>
+        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_3')"/>
+        <h4  class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_1')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP6')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP7')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP8')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP9')"/>
+        <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_2')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP10')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP11')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP12')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP13')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP14')"/>
+        <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_3')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP15')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP16')"/>
+        <p v-text="$ml.with('VueJS').get('ContentP17')"/>
       </div>
 
+    </section>
+    <section class="footer">
+      <div class="container">
+        <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('developersAndDonate')"/>
+        <hr />
+        <div class="about">
+           <div  class="row">
+             <div class="col-6">
+               <base-button class="btn rounded-circle btn-icon-only btn-icon btn-info btn-sharebar" type="info" v-b-modal.modal-feedback>
+                 <i class="fa fa-commenting"></i>
+               </base-button>
+               <b-modal id="modal-feedback" title="BootstrapVue" hide-footer centered :header-bg-variant="modalHeaderBcg" :header-text-variant ="modalHeaderText">
+                 <template v-slot:modal-title>
+                   <span v-text="$ml.with('VueJS').get('writeDevsTitle')"/>
+                 </template>
+                 <p class="text-center" v-text="$ml.with('VueJS').get('writeDevsText1')"/>
+                 <p class="text-center mb-5" v-text="$ml.with('VueJS').get('writeDevsText2')"/>
+                 <div class="text-center mb-5">
+                   <a href="mailto:babycalcforecast@gmail.com" class="btn btn-icon btn-primary">
+                     <span class="btn-inner--icon">
+                       <i class="fa fa-envelope"></i>
+                     </span>
+                     <span class="btn-inner--text" v-text="$ml.with('VueJS').get('mailButton')"/>
+                   </a>
+                 </div>
+
+               </b-modal>
+
+             </div>
+             <div class="col-6 text-right">
+               <base-button class="btn rounded-circle btn-icon-only btn-icon btn-warning btn-sharebar"  type="warning" v-b-modal.modal-donate>
+                 <i class="fa fa-money"></i>
+               </base-button>
+               <b-modal id="modal-donate" title="BootstrapVue" hide-footer centered :header-bg-variant="modalHeaderBcg" :header-text-variant ="modalHeaderText">
+                 <template v-slot:modal-title>
+                   <span v-text="$ml.with('VueJS').get('donateDevsTitle')"/>
+                 </template>
+                 <p class="text-center mb-5" v-text="$ml.with('VueJS').get('donateDevsText1')"/>
+                 <div class="text-center mb-5">
+                   <a href="https://www.paypal.me/greencityarcher" class="btn btn-icon btn-warning" target="_blank">
+                     <span class="btn-inner--icon">
+                       <i class="fa fa-money"></i>
+                     </span>
+                     <span class="btn-inner--text" v-text="$ml.with('VueJS').get('donateButton')"/>
+                   </a>
+                 </div>
+                 <p class="text-center mb-5" v-text="$ml.with('VueJS').get('donateDevsText2')"/>
+
+               </b-modal>
+             </div>
+
+           </div>
+         </div>
+      </div>
 
     </section>
 </div>
