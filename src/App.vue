@@ -42,6 +42,42 @@
                 </div>
               </div>
             </div>
+            <!--TEXT CONTENT-->
+            <div class="text-content">
+              <div class="container">
+                <h2 class="mb-5 text-primary" v-text="$ml.with('VueJS').get('ContentH2')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP1')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP2')"/>
+                <ul class="text-list">
+                  <li v-text="$ml.with('VueJS').get('ContentL1')"/>
+                  <li v-text="$ml.with('VueJS').get('ContentL2')"/>
+                  <li v-text="$ml.with('VueJS').get('ContentL3')"/>
+                </ul>
+                <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_1')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP3')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP4')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP5')"/>
+                <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_2')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP6')"/>
+                <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_3')"/>
+                <h4  class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_1')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP6')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP7')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP8')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP9')"/>
+                <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_2')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP10')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP11')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP12')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP13')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP14')"/>
+                <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_3')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP15')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP16')"/>
+                <p v-text="$ml.with('VueJS').get('ContentP17')"/>
+              </div>
+
+            </div>
           </section>
         </div>
       </div>
@@ -352,7 +388,6 @@
       <div class="container">
         <div class="sharebar mb-5">
           <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('shareUs')"/>
-          <hr />
           <ul class="sharebar__link-list">
             <li>
               <a href="https://twitter.com/share?text=See%20the%20baby%20gender%20prediction%20calculator%20-%20&url=https://babycalc.info%2F" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar" target="_blank">
@@ -382,48 +417,9 @@
             </li>
           </ul>
         </div>
-
-      </div>
-    </section>
-    <section class="text-content">
-      <div class="container">
-        <h2 class="mb-5 text-primary" v-text="$ml.with('VueJS').get('ContentH2')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP1')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP2')"/>
-        <ul class="text-list">
-          <li v-text="$ml.with('VueJS').get('ContentL1')"/>
-          <li v-text="$ml.with('VueJS').get('ContentL2')"/>
-          <li v-text="$ml.with('VueJS').get('ContentL3')"/>
-        </ul>
-        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_1')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP3')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP4')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP5')"/>
-        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_2')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP6')"/>
-        <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_3')"/>
-        <h4  class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_1')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP6')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP7')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP8')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP9')"/>
-        <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_2')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP10')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP11')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP12')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP13')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP14')"/>
-        <h4 class="mb-3 text-primary" v-text="$ml.with('VueJS').get('ContentH4_3')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP15')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP16')"/>
-        <p v-text="$ml.with('VueJS').get('ContentP17')"/>
-      </div>
-
-    </section>
-    <section class="footer">
-      <div class="container">
-        <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('developersAndDonate')"/>
         <hr />
+        <h5 class="text-center mb-5" v-text="$ml.with('VueJS').get('developersAndDonate')"/>
+
         <div class="about">
            <div  class="row">
              <div class="col-6">
@@ -473,7 +469,6 @@
            </div>
          </div>
       </div>
-
     </section>
 </div>
 </template>
@@ -1352,7 +1347,11 @@ handleMonthChange: function(info){
   }
   .shape-paddings{
     padding-top: 10rem!important;
-    padding-bottom: 9rem!important;
+    padding-bottom: 3rem!important;
+  //    padding-bottom: 3rem!important;
+  }
+  .text-content{
+    padding-bottom: 5rem;
   }
   .navbar-padding-top{
     padding-top: 2.5rem!important;
