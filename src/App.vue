@@ -558,9 +558,9 @@ export default {
       prognoseEnd: new Date(),
       calendarEvents: [],
       dataPickerLanguages: dpLangs,
-      dataPickerLanguage: 'ru',
+      dataPickerLanguage: 'en',
       calendarLanguages: {ru: ru, es: es},
-      calendarLanguage: 'ru',
+      calendarLanguage: 'en',
       eventsSorting: ['methodid'],
       modalHeaderBcg: 'secondary',
       modalHeaderText: 'primary',
@@ -605,6 +605,16 @@ computed:{
       }
     }
 },
+created: function () {
+    var userLang = navigator.language || navigator.userLanguage;
+    var l = userLang.substring(0,2);
+    if ((l == 'ru')||(l == 'Ru')||(l =='RU')){
+      this.changeLanguage('ru');
+    }
+    else if ((l == 'es')||(l=='Es')||(l =='ES')){
+      this.changeLanguage('es');
+    }
+  },
 methods: {
 
   setModeDate(){
