@@ -418,6 +418,12 @@
           <p v-text="$ml.with('VueJS').get('ContentP15')"/>
           <p v-text="$ml.with('VueJS').get('ContentP16')"/>
           <p v-text="$ml.with('VueJS').get('ContentP17')"/>
+          <h3 class="mb-4 text-primary" v-text="$ml.with('VueJS').get('ContentH3_4')"/>
+          <p v-text="$ml.with('VueJS').get('ContentP18')"/>
+          <p v-text="$ml.with('VueJS').get('ContentP19')"/>
+          <p>
+            <strong v-text="$ml.with('VueJS').get('ContentP20')"/>
+          </p>
         </div>
       </div>
     </section>

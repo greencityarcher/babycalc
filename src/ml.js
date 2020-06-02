@@ -82,6 +82,9 @@ export default new MLCreate({
       ContentP15:"Японский метод прогнозирования пола ребенка схож с китайским, но он также учитывает дату рождения отца. Он включает 2 таблицы. В первой таблице для каждой пары «месяц рождения отца - месяц рождения матери» содержится число. Во второй таблице для каждого числа из первой таблицы и календарного месяца указана вероятность зачатия мальчика или девочки. Таким образом, японский метод позволяет «спланировать» пол будущего ребенка на любой период времени.",
       ContentP16:"Найти японские таблицы зачатия в интернете не составляет труда. Чтобы воспользоваться ими, не нужно переводить даты в лунный календарь. ",
       ContentP17:"Результаты опросов показывают, что точность японского метода составляет 70-80%.",
+      ContentP18:"Запланировать пол ребенка невозможно - так утверждает официальная медицина. Тем не  многие пары отмечают, что успешно использовали различные «народные» методики, чтобы зачать дочь или сына. Так, в Китае многие пары планируют дату зачатия по лунному календарю, а в России пытаются спрогнозировать, рассчитывая «возраст» крови родителей.",
+      ContentP19:"Если вы планируете ребенка, при помощи BabyCalc вы можете построить календарь, в котором будут отмечены даты, в которые наиболее вероятно зачать девочку или мальчика. Чтобы построить прогноз, выберите режим «Построить календарь прогнозов», введите даты рождения родителей. Вы можете выбрать один или несколько методов для расчета прогноза, отмечая нужные методики слева от календаря.",
+      ContentP20:"Однако, не стоит относиться к подобному планированию слишком серьезно - ни один из используемых в BabyCalc методов не подтвержден научными исследованиями. Воспринимайте прогноз исключительно как развлекательную информацию.",
       ContentL1:"обновление крови,",
       ContentL2:"китайский лунный календарь,",
       ContentL3:"традиционная японская таблица.",
@@ -90,7 +93,10 @@ export default new MLCreate({
       ContentH3_3: "Какие методы расчета использует этот сайт?",
       ContentH4_1: "Метод обновления крови",
       ContentH4_2: "Китайский лунный календарь",
-      ContentH4_3: "Японская таблица"
+      ContentH4_3: "Японская таблица",
+      ContentH3_4: "Как запланировать пол ребенка?",
+
+
 
     }),
 
@@ -168,6 +174,9 @@ export default new MLCreate({
       ContentP15:"The Japanese method for predicting the gender of the child is similar to the Chinese, but it also takes into account the date of birth of the father. It includes 2 tables. In the first table for each pair, \"father’s month of birth - mother’s month of birth\" contains a number. In the second table, for each number from the first table and the calendar month, the probability of conceiving a boy or girl is indicated. Thus, the Japanese method allows you to plan the gender of the child for any period of time.",
       ContentP16:"Finding Japanese baby charts on the Internet is easy. To use them, you do not need to translate dates into the lunar calendar.",
       ContentP17:"Surveys show that the accuracy of the Japanese method is 70-80%.",
+      ContentP18:"It is impossible to plan the sex of the child - as official medicine claims. However, not many couples note that they have successfully used various \"folk\" techniques to conceive a daughter or son. So, in China, many couples plan the date of conception according to the lunar calendar, and in Russia they try to predict, calculating the \"age\" of the blood of the parents.",
+      ContentP19:"If you are planning a baby, with the help of BabyCalc you can build a calendar, which will mark the dates on which it is most likely to conceive a girl or boy. To build a forecast, select the \"Build Forecast Calendar\" mode, enter the dates of birth of the parents. You can select one or several methods for calculating the forecast, marking the necessary methods to the left of the calendar.",
+      ContentP20:"However, do not take such planning too seriously - not one of the methods used in BabyCalc has been confirmed by scientific research. Think of the forecast as entertaining information only.",
       ContentL1:"blood renewal,",
       ContentL2:"chinese lunar calendar,",
       ContentL3:"traditional japanese table.",
@@ -176,7 +185,8 @@ export default new MLCreate({
       ContentH3_3: "What calculation methods does this site use?",
       ContentH4_1: "Blood renewal method",
       ContentH4_2: "Chinese lunar calendar",
-      ContentH4_3: "Japanese table"
+      ContentH4_3: "Japanese table",
+      ContentH3_4: "How to plan the gender of the child?"
 
 
     }),
@@ -254,6 +264,9 @@ export default new MLCreate({
       ContentP15:"El método japonés para predecir el género del niño es similar al chino, pero también tiene en cuenta la fecha de nacimiento del padre. Incluye 2 tablas. En la primera tabla para cada pareja, \"mes de nacimiento del padre - mes de nacimiento de la madre\" contiene un número. En la segunda tabla, para cada número de la primera tabla y el mes calendario, se indica la probabilidad de concebir un niño o niña. Por lo tanto, el método japonés le permite planificar el género del feto para cualquier período de tiempo.",
       ContentP16:"Encontrar tablas de concepción japonesas en Internet es fácil. Para usarlos, no es necesario traducir las fechas al calendario lunar.",
       ContentP17:"Las encuestas muestran que la precisión del método japonés es del 70-80%.",
+      ContentP18:"Es imposible planificar el sexo del niño, como afirma la medicina oficial. Sin embargo, no muchas parejas notan que han utilizado con éxito diversas técnicas \"populares\" para concebir una hija o un hijo. Entonces, en China, muchas parejas planean la fecha de la concepción de acuerdo con el calendario lunar, y en Rusia intentan predecir, calculando la \"edad\" de la sangre de los padres.",
+      ContentP19:"Si está planeando un bebé, con la ayuda de BabyCalc puede crear un calendario, que marcará las fechas en que es más probable que conciba una niña o un niño. Para crear un pronóstico, seleccione el modo \"Crear calendario de pronóstico\", ingrese las fechas de nacimiento de los padres. Puede seleccionar uno o varios métodos para calcular el pronóstico, marcando los métodos necesarios a la izquierda del calendario.",
+      ContentP20:"Sin embargo, no se tome demasiado en serio esta planificación: ninguno de los métodos utilizados en BabyCalc ha sido confirmado por investigaciones científicas. Piense en el pronóstico solo como información entretenida.",
       ContentL1:"renovación de sangre,",
       ContentL2:"calendario lunar chino,",
       ContentL3:"tabla tradicional japonesa.",
@@ -263,6 +276,7 @@ export default new MLCreate({
       ContentH4_1: "Método de renovación de sangre",
       ContentH4_2: "Calendario lunar chino",
       ContentH4_3: "Tabla japonesa",
+      ContentH3_4: "¿Cómo planificar el género del niño?"
 
     })
   ]
