@@ -22,9 +22,11 @@
 
 <script>
   import TextLayout from '../layouts/Textpage.vue'
+  import VLink from '../components/VLink.vue'
   export default {
     components: {
-      TextLayout
+      TextLayout,
+      VLink
     }
   }
 </script>

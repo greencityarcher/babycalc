@@ -384,8 +384,8 @@ export default {
       calendarLanguages: {ru: ru, es: es},
       calendarLanguage: 'en',
       eventsSorting: ['methodid'],
-      modalHeaderBcg: 'secondary',
-      modalHeaderText: 'primary',
+      //modalHeaderBcg: 'secondary',
+    //  modalHeaderText: 'primary',
       chineseAgeCalendarError: false,
       motherBDayCalendarError: false,
       fatherBDayCalendarError: false
@@ -945,7 +945,7 @@ handleMonthChange: function(info){
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .progress-wrap .progress-label{
     display: none;
   }

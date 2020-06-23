@@ -11,8 +11,8 @@ export default new MLCreate({
       langName: 'Русский',
       empty: "",
       title: 'Калькулятор пола ребенка',
-      aboutPart1:'Здесь вы можете узнать пол будущего ребенка.  Для расчетов используется теория обновления крови, китайский лунный календарь  и японский календарь беременности.',
-      aboutPart2:'Зная предполагаемую дату зачатия, вы можете узнать кого вы, вероятнее всего ждете - мальчика или девочку.  Также вы можете построить календарь,  в котором будут указан наиболее вероятный пол ребенка для каждого дня зачатия. Эта функция будет полезна тем, кто планирует беременность.',
+      aboutPart1: "Узнайте пол будущего ребенка онлайн или создайте индивидуальный календарь зачатия для планирования беременности с учетом желаемого пола.",
+      aboutPart2:'Метод прогнозирования BabyCalc использует теорию обновления крови, китайский лунный календарь и японский календарь беременности. Благодаря комплексному использованию трех теорий вместе, BabyCalc позволяет получить более точный результат по сравнению с расчетами по отдельным методикам.',
       aboutPart3:'Для расчетов используется теория обновления крови, китайский лунный календарь  и традиционный японский метод. Вы можете использовать в расчетах все три метода сразу или выбрать предпочтительные.',
       modeSectionHeader: 'Выберите режим',
       mbdayTitle: 'Дата рождения матери',
@@ -168,7 +168,8 @@ export default new MLCreate({
       japanese16:"Все прогнозы на сайте BabyCalc предоставляются исключительно в развлекательных целях и не могут служить основой для принятия серьезных решений.",
       p404_title:"Страница не найдена",
       p404_subtitle:"Страница, которую вы ищете, больше не существует",
-      goToCalc:"Перейти в калькулятор пола ребенка и календарь беременности"
+      goToCalc:"Перейти в калькулятор пола ребенка и календарь беременности",
+      converterError: "Ошибка! Неверно указана дата рождения"
 
     }),
 
@@ -176,15 +177,15 @@ export default new MLCreate({
       langName: 'English',
       empty: "",
       title: 'Baby gender calculator',
-      aboutPart1:'Here you can find out the gender of the child. For calculations, the theory of blood renewal, the Chinese lunar calendar and the Japanese pregnancy calendar are used.',
-      aboutPart2:'Knowing the estimated date of conception, you can find out who you are most likely waiting for - a boy or a girl. You can also build a calendar that will indicate the most likely gender of the child for each day of conception. This feature will be useful for those planning a pregnancy.',
+      aboutPart1:'Predict the gender of the baby online or create an individual conception calendar for planning pregnancy, taking into account the desired gender. ',
+      aboutPart2:'The BabyCalc prediction method uses the theory of blood renewal, the Chinese baby chart, and the Japanese pregnancy calendar. Thanks to the integrated use of the three theories together, BabyCalc allows you to get a more accurate result compared to calculations using individual methods.',
       aboutPart3:'For calculations, the theory of blood renewal, the Chinese lunar calendar and the traditional Japanese method are used. You can use all three methods in the calculations at once or choose preferred ones.',
       modeSectionHeader: 'Choose mode',
       mbdayTitle: 'Mother\'s date of birth',
       fbdayTitle: ' Father\'s date of birth',
       concdayTitle: 'Conception date',
       datemodeTitle: 'Predict the gender of the baby by the date of conception',
-      calendarmodeTitle: 'Pregnacy conception calculator',
+      calendarmodeTitle: 'Pregnacy conception calendar',
       methodslistTitle: 'Calculation methods',
       bloodMethodName: 'Blood seniority',
       chineseMethodName: 'Chinese moon calendar',
@@ -332,22 +333,23 @@ export default new MLCreate({
       japanese16:"All forecasts on the BabyCalc website are provided for entertainment purposes only and cannot serve as the basis for serious decisions.",
       p404_title:"Page not found",
       p404_subtitle:"The page you are looking for no longer exists",
-      goToCalc:"Go to the baby gender calculator and pregnancy calendar"
+      goToCalc:"Go to the baby gender calculator and pregnancy calendar",
+      converterError: "Error! Incorrect date of birth"
 
     }),
     new MLanguage('es').create({
       langName: 'Español',
       empty: "",
       title: 'Calculadora de género de bebé',
-      aboutPart1:'Aquí puede averiguar el género del feto. Para los cálculos, se utilizan la teoría de la renovación de la sangre, el calendario lunar chino y el calendario de embarazo japonés.',
-      aboutPart2:'Conociendo la fecha estimada de la concepción, puede averiguar a quién está esperando: un niño o una niña. También puede crear un calendario que indique el género más probable del niño para cada día de concepción. Esta característica será útil para quienes planean un embarazo.',
+      aboutPart1:'Descubra en línea el género del bebé o cree un calendario de concepción individual para planificar el embarazo, teniendo en cuenta el género deseado.',
+      aboutPart2:'El método de predicción BabyCalc utiliza la teoría de la renovación de la sangre, el calendario lunar chino y el calendario de embarazo japonés. Gracias al uso integrado de las tres teorías juntas, BabyCalc le permite obtener un resultado más preciso en comparación con los cálculos que utilizan métodos individuales.',
       aboutPart3:'Para los cálculos, se utilizan la teoría de la renovación de la sangre, el calendario lunar chino y el método tradicional japonés. Puede usar los tres métodos en los cálculos a la vez o elegir los preferidos.',
       modeSectionHeader: 'Elige un modo',
       mbdayTitle: 'Fecha de nacimiento de la madre',
       fbdayTitle: 'Fecha de nacimiento del padre',
       concdayTitle: 'Fecha de la concepción',
       datemodeTitle: 'Predecir el género del niño por la fecha de concepción',
-      calendarmodeTitle: 'Calculadora de concepción del embarazo',
+      calendarmodeTitle: 'Calendario de concepción del embarazo',
       methodslistTitle: 'Métodos de cálculo',
       bloodMethodName: 'Antigüedad de sangre',
       chineseMethodName: 'El calendario lunar chino',
@@ -495,7 +497,8 @@ export default new MLCreate({
       japanese16:"Todos los pronósticos en el sitio web de BabyCalc se proporcionan solo con fines de entretenimiento y no pueden servir como base para tomar decisiones serias.",
       p404_title:"Página no encontrada",
       p404_subtitle:"La página que estás buscando ya no existe",
-      goToCalc:"Ir a la calculadora de género del bebé y el calendario de embarazo"
+      goToCalc:"Ir a la calculadora de género del bebé y el calendario de embarazo",
+      converterError: "¡Error! Fecha de nacimiento incorrecta"
     })
   ]
 })

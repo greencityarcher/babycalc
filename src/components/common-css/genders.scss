@@ -14,3 +14,14 @@
 .baby-girl{
   background-image: url(./../assets/baby-girl.svg);
 }
+.jtable{
+  background-size: auto 50%!important;
+  background-position: top center!important;
+}
+.baby-boygirl{
+  background-position: right top, left top!important;
+  background-image: url(./../assets/baby-boy.svg), url(./../assets/baby-girl.svg);
+  background-color: #ddd2fc;
+  background-size: 50% auto, 50% auto!important;
+  color: transparent;
+}

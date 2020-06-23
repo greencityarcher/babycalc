@@ -68,6 +68,7 @@ export default {
     VLink,
     BaseDropdown
   },
+  
   methods:{
     changeLanguage(lang){
     this.$ml.change(lang);

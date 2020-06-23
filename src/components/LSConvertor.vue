@@ -20,9 +20,7 @@
            <h4 class="mb-3" v-text="$ml.with('VueJS').get('lunarSolar3')" />
              <div v-text="lunarAge" class="lunar-age"/>
          </div>
-         <div class="alert alert-primary" v-if="lunarAge<0">
-           Ошибка! Неверно указана дата рождения
-         </div>
+         <div class="alert alert-primary" v-if="lunarAge<0" v-text="$ml.with('VueJS').get('converterError')"/>
        </transition>
       </div>
     </div>
@@ -38,7 +36,7 @@
           <div class="datepicker-wrap mb-3">
             <Datepicker
               v-model="cDate"
-              :open-date="now"
+              :open-date="today"
               :monday-first = "true"
             ></Datepicker>
           </div>

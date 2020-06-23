@@ -154,7 +154,7 @@ export default {
                 res.probability = data[k+i*12].girlProbability+":"+data[k+i*12].boyProbability;
               }
               else{
-                res.gender='boyorgirl'
+                res.gender='boygirl'
                 res.probability= "1:1"
               }
 
@@ -172,15 +172,5 @@ export default {
 @import './common-css/tables.scss';
 @import './common-css/genders.scss';
 
-.jtable{
-  background-size: auto 50%!important;
-  background-position: top center!important;
-}
-.baby-boyorgirl{
-  background-position: right top, left top!important;
-  background-image: url(./../assets/baby-boy.svg), url(./../assets/baby-girl.svg);
-  background-color: #ddd2fc;
-  background-size: 50% auto, 50% auto!important;
-  color: transparent;
-}
+
 </style>
