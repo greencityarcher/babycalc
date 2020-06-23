@@ -1,4 +1,9 @@
 export default {
   '/': 'Home',
-  '/about': 'About'
+  '/methods': 'Methods',
+  '/blood-age': 'BloodAge',
+  '/chinese-baby-chart': 'ChineseBabyChart',
+  '/japanese-baby-chart': 'JapaneseBabyChart',
+  '/lunar-age': 'LunarAge',
+  '/built-in-babycalc': 'BuiltInBabyCalc'
 }

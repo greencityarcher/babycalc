@@ -1,0 +1,57 @@
+.b-table{
+  width: 100%;
+  border: 2px solid #63708C;
+  border-collapse: collapse;
+  tr, td, th{
+    border: 1px solid #63708C;
+    vertical-align: center;
+    text-align: center;
+  }
+  tr, td {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  td{
+    width: 7.5%;
+    background-repeat: no-repeat;
+
+  }
+  th:first-child{
+    width: 10%;
+  }
+
+  th{
+    color: #63708C;
+    font-weight: bold;
+  }
+
+  caption{
+    caption-side: top;
+    font-size: 1.5em;
+    color: #5e72e4;
+  }
+  .hidden{
+    font-size: 0;
+  }
+  .probability{
+    color: #525f7f;
+  }
+}
+.boy{
+  background-color: rgba(200,232,252,1)!important;
+  border-color: #E9F5FB;
+  color: transparent;
+}
+.girl{
+  background-color: rgba(255,222,228,1)!important;
+  border-color: #E9F5FB;
+  color: transparent;
+}
+.baby-boy{
+  background-image: url(./../assets/baby-boy.svg);
+}
+.baby-girl{
+  background-image: url(./../assets/baby-girl.svg);
+}
