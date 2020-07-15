@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+  <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+  <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+  <title>BabyCalc - chinese baby chart</title>
+  <link href=commoncss.css rel=stylesheet>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165117689-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165117689-1');
+  </script>
+  <script data-ad-client="ca-pub-8758266991577475" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5S6D59X');</script>
+<!-- End Google Tag Manager -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(62662183, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/62662183" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Predict the gender of child with high accuracy or create your own pregnacy conception calendar">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="yandex-verification" content="2e1db38e062b3ac0" />
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafrex/spa-github-pages
+    // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+    // ----------------------------------------------------------------------
+    // This script checks to see if a redirect is present in the query string
+    // and converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function(l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function(v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location))
+  </script>
+</head>
+<div id="app">
+  <div>
+    <div>
+      <header class="header-global">
+        <nav class="navbar navbar-main navbar-expand-lg navbar-light navbar-transparent navbar-padding-top">
+          <div class="container">
+            <div class="navigation-wrap">
+              <li aria-haspopup="true" class="dropdown dropdown"><button type="button" class="btn dropdown-toggle btn-secondary btn-sm">Menu</button>
+                <ul class="dropdown-menu"><a href="/#" class="dropdown-item">Baby gender calculator</a><a href="/#methods" class="dropdown-item">Gender prediction methods</a><a href="/#blood-age" class="dropdown-item">Gender of a child for blood renewal</a><a href="/#chinese-baby-chart"
+                    class="dropdown-item">Chinese baby chart</a><a href="/#japanese-baby-chart" class="dropdown-item">Japanese baby chart</a></ul>
+              </li>
+              <ul class="langList">
+                <li class="langList__item"><button type="button" class="btn btn-secondary btn-sm">ru</button></li>
+                <li class="langList__item"><button type="button" class="btn btn-secondary btn-sm">en</button></li>
+                <li class="langList__item"><button type="button" class="btn btn-secondary btn-sm">es</button></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="mb-5">
+        <div style="transform-origin: center center;">
+          <div class="position-relative">
+            <section class="section-shaped my-0">
+              <div class="shape shape-style-1 shape-default shape-skew header-bcg"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="shape-container container shape-paddings">
+                <div class="row">
+                  <div class="col no-margin-up">
+                    <div class="display-2  text-white mb-3">BabyCalc</div>
+                    <h1>Chinese baby chart</h1></div>
+                </div>
+                <p>The Chinese table for determining the sex of the child by the age of the mother is known for more than 700 years. Its original has been preserved and is still stored at the Beijing Institute. Recognized in China, the baby gender calendar
+                  is now popular all over the world. It is used both to find out the sex of the child from the table, and in order to choose the most successful day to conceive a boy or girl.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <div class="mb-5">
+        <p class="mb-5">Despite the fact that the Chinese table of the sex of the child is not based on medical or scientific theories, more than 75% of mothers note its reliability.</p>
+        <h2 class="text-primary mb-5">How to determine the sex of the child by the date of conception?</h2>
+        <p>To find out the sex of the child from the table, you must first calculate the lunar age of the mother. The fact is that the Chinese calendar for determining the sex of the child is built on the basis of the Chinese lunar calendar. According to
+          him, the mother’s age will be a year or two more than the age according to the European calendar.</p>
+        <p class="mb-3">You can find out your lunar age online using the calculator on <a href="/#chinese-baby-chart">this page</a>.</p>
+
+        <p class="mb-5">Knowing your lunar age and month of conception, it remains only to find the appropriate cell in the table, it will indicate the most likely gender of the child.</p>
+        <div id="table" class="mb-5">
+          <table class="b-table">
+            <caption>Chinese baby chart</caption>
+            <tr>
+              <th rowspan="2">Lunar age of mother</th>
+              <th colspan="12">Lunar month of conception</th>
+            </tr>
+            <tr>
+              <td> 1 </td>
+              <td> 2 </td>
+              <td> 3 </td>
+              <td> 4 </td>
+              <td> 5 </td>
+              <td> 6 </td>
+              <td> 7 </td>
+              <td> 8 </td>
+              <td> 9 </td>
+              <td> 10 </td>
+              <td> 11 </td>
+              <td> 12 </td>
+            </tr>
+            <tr>
+              <td class="baby-18"><span class="hidden">18</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-19"><span class="hidden">19</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-20"><span class="hidden">20</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-21"><span class="hidden">21</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-22"><span class="hidden">22</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-23"><span class="hidden">23</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-24"><span class="hidden">24</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-25"><span class="hidden">25</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-26"><span class="hidden">26</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-27"><span class="hidden">27</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-28"><span class="hidden">28</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-29"><span class="hidden">29</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-30"><span class="hidden">30</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-31"><span class="hidden">31</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-32"><span class="hidden">32</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-33"><span class="hidden">33</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-34"><span class="hidden">34</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-35"><span class="hidden">35</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-36"><span class="hidden">36</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-37"><span class="hidden">37</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-38"><span class="hidden">38</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-39"><span class="hidden">39</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-40"><span class="hidden">40</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-41"><span class="hidden">41</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-42"><span class="hidden">42</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-43"><span class="hidden">43</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+            <tr>
+              <td class="baby-44"><span class="hidden">44</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+            </tr>
+            <tr>
+              <td class="baby-45"><span class="hidden">45</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-girl girl"><span class="hidden">girl</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+              <td class="baby-boy boy"><span class="hidden">boy</span></td>
+            </tr>
+          </table>
+        </div>
+        <p class="mb-5">It is much easier to calculate the sex of the baby online using the Chinese pregnancy calendar - on the main page of this site.</p>
+        <div class="text-center mb-5"><a href="/#" class="btn btn-primary mb-5 align-center"><span>Go to the baby gender calculator and pregnancy calendar</span></a></div>
+        <h2 class="text-primary mb-5">Chinese conception calendar</h2>
+        <p>If you want to conceive a child of a certain gender, use the function "Conception Calendar" on the main page of this site. The calculator will calculate the most favorable intervals for the conception of a boy or girl, not only for 2020, but also
+          for any interval you need.</p>
+        <p class="mb-5">The calendar will show the periods in which the conception of a boy or girl is most likely.</p>
+        <div class="alert alert-primary">Do not forget that gender determination on the Chinese calendar does not have 100% accuracy and can be used exclusively for entertainment purposes.</div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <div class="sharebar mb-5">
+          <h5 class="text-center mb-5">Recommend BabyCalc to friends</h5>
+          <hr>
+          <ul class="sharebar__link-list">
+            <li><a href="https://twitter.com/share?text=See%20the%20baby%20gender%20prediction%20calculator%20-%20&amp;url=https://babycalc.info%2F" target="_blank" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbabycalc.info%2F&amp;src=sdkpreparse" target="_blank" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="whatsapp://send?text=https://babycalc.info/" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar"><i class="fa fa-whatsapp"></i></a></li>
+            <li><a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://babycalc.info/." target="_blank" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://telegram.me/share/url?url=https://babycalc.info/&amp;text=Baby%20gender%20prediction%20calculator" target="_blank" class="btn rounded-circle btn-icon-only btn-icon btn-primary btn-sharebar"><i class="fa fa-telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <h5 class="text-center mb-5">Contact developers and Donate</h5>
+        <hr>
+        <div class="about">
+          <div class="row justify-content-between">
+            <div class="col-5 text-center data-input-wrap">
+              <div class="footer-text mb-3 ">Email us!</div>
+              <div><button type="button" class="btn btn rounded-circle btn-icon-only btn-icon btn-info btn-sharebar btn-info"><!----><!----><!----><i class="fa fa-commenting"></i></button>
+                <!---->
+              </div>
+            </div>
+            <div class="col-5 text-center data-input-wrap">
+              <div class="footer-text mb-3">Support developers financially</div>
+              <div><button type="button" class="btn btn rounded-circle btn-icon-only btn-icon btn-warning btn-sharebar btn-warning"><!----><!----><!----><i class="fa fa-money"></i></button>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</html>
