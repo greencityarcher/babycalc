@@ -3,4 +3,5 @@ module.exports = {
     //? '/babycalc/'
   //  ? '/babycalc/'
   //  : '/'
+     baseUrl: ‘/babycalc/’
 }
