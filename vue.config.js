@@ -1,7 +1,7 @@
 module.exports = {
-//  publicPath: process.env.NODE_ENV === 'production'
-    //? '/babycalc/'
-  //  ? '/babycalc/'
-  //  : '/'
-     baseUrl: ‘/babycalc/’
+  publicPath: process.env.NODE_ENV === 'production'
+   ? '/babycalc/'
+    ? '/babycalc/'
+    : '/'
+    
 }
